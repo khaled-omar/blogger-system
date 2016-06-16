@@ -25,3 +25,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Dependencies
+This project uses Laravel 5.2 php framework.
+* A typical LAMP/WAMP/XAMP or whatever AMP stack you've got.
+* Make sure you have [composer](https://getcomposer.org) installed.
+* If you're a windows or mac user you may need laravel homestead.
+
+## Set up development environment
+* clone the repo.
+* `cd blogger-system`
+* `composer install`
+* `mysql -u root -p`
+* `create database blog;`
+* `grant all privileges on weresick.* to 'weresickuser'@'localhost'identified by 'password';`
+* open the .env.example file and fill in the following part:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=blog
+DB_USERNAME=blog
+DB_PASSWORD=password
+```
+and SAVE AS a new file called: `.env`.
+* `exit` to get out of the mysql cmd.
+* `php artisan migrate`
+* `php artisan key:generate`
+
+You're good to go!
+
+## testing
+You may test it with php's built-in webserver: `php -S localhost:8000 `. <br/>
+And then type `localhost:8000` in your browser's address bar.
