@@ -38,7 +38,6 @@ This project uses Laravel 5.2 php framework.
 * `composer install`
 * `mysql -u root -p`
 * `create database blog;`
-* `grant all privileges on weresick.* to 'weresickuser'@'localhost'identified by 'password';`
 * open the .env.example file and fill in the following part:
 ```
 DB_CONNECTION=mysql
